@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="image-search.html">Image Search</a> |
+            <a href="advanced-search.html">Advanced Search</a>
+            <center>
+                <img src="google.png">
+            </center>
+        </nav>
+    </header>
+    <main>
+        <form id="searchForm" action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" id="searchQuery" placeholder="Search in google or type url" required>
+            <input type="submit" value="Google Search">
+            <input type="button" value="I feel lucky" id="luckyButton">
+        </form>
+    </main>
+</body>
+</html>
