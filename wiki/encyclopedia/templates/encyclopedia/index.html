@@ -1,0 +1,39 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    
+    <div class="results">
+        <div class="row">
+            <div class="col-4">
+                <h1>All Pages</h1>
+
+                <ul>
+                    {% for entry in entries %}
+                        <li>{{ entry }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-5">
+                <br>
+                {% if message %}
+                    <!-- Mensaje de error cuando no se encuentran resultados -->
+                    <div class="container-sm">
+                        <br><br><br>
+                        <div class="alert alert-danger text-center" role="alert">
+                            {{ message }} <!-- Mostrar el mensaje personalizado -->
+                        </div>
+                    </div>
+                {% elif results %}
+                    <!-- Mostrar los resultados de búsqueda exactos o coincidencias -->
+                    <div>{{ results|safe }}</div>
+                {% endif %}
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
